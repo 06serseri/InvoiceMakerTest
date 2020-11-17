@@ -34,24 +34,9 @@ public class EditInvoiceActivity extends AppCompatActivity {
         buttonUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Invoice invoice;
-                
                 InvoiceDatabaseHelper invoiceDatabaseHelper = new InvoiceDatabaseHelper(EditInvoiceActivity.this);
-//                try {
-//                    invoice = new Invoice(-1, editTextInvoiceNumber2.getText().toString(),
-//                            editTextInvoiceDate2.getText().toString(),
-//                            editTextInvoiceTerms2.getText().toString(),
-//                            Double.parseDouble(editTextInvoiceSubTotalAmount2.getText().toString()),
-//                            Double.parseDouble(editTextInvoiceTaxAmount2.getText().toString()),
-//                            Double.parseDouble(editTextInvoiceTotalAmount2.getText().toString()));
-//
-//                    Toast.makeText(EditInvoiceActivity.this, invoice.toString(), Toast.LENGTH_LONG).show();
-//                } catch (Exception e){
-//                    Toast.makeText(EditInvoiceActivity.this, "Error creating invoice", Toast.LENGTH_SHORT).show();
-//                    invoice = new Invoice(-1, "Error", "Error",
-//                            "Error", 0,0,0);
-//                }
+
                 invoice = new Invoice(invoiceId, editTextInvoiceNumber2.getText().toString(),
                             editTextInvoiceDate2.getText().toString(),
                             editTextInvoiceTerms2.getText().toString(),
@@ -60,7 +45,7 @@ public class EditInvoiceActivity extends AppCompatActivity {
                             Double.parseDouble(editTextInvoiceTotalAmount2.getText().toString()));
 
                 boolean success = invoiceDatabaseHelper.updateInvoice(invoice);
-                Toast.makeText(EditInvoiceActivity.this, "Success= " + success, Toast.LENGTH_LONG).show();
+                Toast.makeText(EditInvoiceActivity.this, "Updated= " + success, Toast.LENGTH_LONG).show();
                 //Go back to the Main Activity
                 Intent intent = new Intent(EditInvoiceActivity.this, MainActivity.class);
                 startActivity(intent);
@@ -71,7 +56,21 @@ public class EditInvoiceActivity extends AppCompatActivity {
         buttonDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Invoice invoice;
+                InvoiceDatabaseHelper invoiceDatabaseHelper = new InvoiceDatabaseHelper(EditInvoiceActivity.this);
 
+                invoice = new Invoice(invoiceId, editTextInvoiceNumber2.getText().toString(),
+                        editTextInvoiceDate2.getText().toString(),
+                        editTextInvoiceTerms2.getText().toString(),
+                        Double.parseDouble(editTextInvoiceSubTotalAmount2.getText().toString()),
+                        Double.parseDouble(editTextInvoiceTaxAmount2.getText().toString()),
+                        Double.parseDouble(editTextInvoiceTotalAmount2.getText().toString()));
+
+                boolean success = invoiceDatabaseHelper.deleteInvoice(invoice);
+                Toast.makeText(EditInvoiceActivity.this, "Deleted= " + success, Toast.LENGTH_LONG).show();
+                //Go back to the Main Activity
+                Intent intent = new Intent(EditInvoiceActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }
