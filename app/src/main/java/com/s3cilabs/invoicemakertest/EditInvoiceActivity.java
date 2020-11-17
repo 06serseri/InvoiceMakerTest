@@ -52,7 +52,6 @@ public class EditInvoiceActivity extends AppCompatActivity {
             }
         });
 
-        //TODO finish the delete method
         buttonDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,6 +73,7 @@ public class EditInvoiceActivity extends AppCompatActivity {
             }
         });
     }
+
 
     void getAndSetIntentData(){
         Log.d(TAG, "getSet started");
@@ -102,6 +102,7 @@ public class EditInvoiceActivity extends AppCompatActivity {
             Toast.makeText(this, "No data", Toast.LENGTH_SHORT).show();
         }
     }
+
     private void initViews() {
         Log.d(TAG, "initViews: STARTED");
         editTextInvoiceTaxAmount2 = findViewById(R.id.editTextInvoiceTaxAmount2);

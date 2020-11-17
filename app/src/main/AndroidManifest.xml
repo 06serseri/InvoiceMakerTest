@@ -9,9 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.InvoiceMakerTest">
-        <activity android:name=".EditInvoiceActivity"
-            android:parentActivityName=".MainActivity"
-            android:label="Update Invoice"></activity>
+        <activity android:name=".CompanyActivity"></activity>
+        <activity
+            android:name=".EditInvoiceActivity"
+            android:label="Update Invoice"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AddInvoiceActivity"
             android:parentActivityName=".MainActivity" />
