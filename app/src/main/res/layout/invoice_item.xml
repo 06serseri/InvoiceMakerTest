@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/invoiceItemLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/textViewInvoiceId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Invoice ID" />
+
+    <TextView
+        android:id="@+id/textViewInvoiceNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/textViewInvoiceId"
+        android:layout_marginStart="8dp"
+        android:hint="Invoice Number" />
+
+    <TextView
+        android:id="@+id/textViewInvoiceDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Invoice Date"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/textViewInvoiceNumber"/>
+
+    <TextView
+        android:id="@+id/textViewInvoiceTerms"
+        android:layout_width="wrap_content"
+        android:layout_toEndOf="@+id/textViewInvoiceDate"
+        android:layout_marginStart="8dp"
+        android:layout_height="wrap_content"
+        android:hint="Invoice Terms" />
+
+    <TextView
+        android:id="@+id/textViewInvoiceSubTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/textViewInvoiceId"
+        android:layout_height="wrap_content"
+        android:hint="Invoice Sub Total" />
+
+    <TextView
+        android:id="@+id/textViewInvoiceTaxAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/textViewInvoiceSubTotalAmount"
+        android:layout_below="@+id/textViewInvoiceId"
+        android:layout_marginStart="8dp"
+        android:hint="Invoice Tax Amount" />
+
+    <TextView
+        android:id="@+id/textViewInvoiceTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewInvoiceId"
+        android:layout_toEndOf="@+id/textViewInvoiceTaxAmount"
+        android:layout_marginStart="8dp"
+        android:hint="Invoice Total" />
+
+
+</RelativeLayout>
