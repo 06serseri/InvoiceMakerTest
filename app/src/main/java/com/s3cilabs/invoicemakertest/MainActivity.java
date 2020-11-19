@@ -55,6 +55,14 @@ public class MainActivity extends AppCompatActivity {
                 recyclerViewInvoice.setAdapter(mApapter);
             }
         });
+
+        buttonCompanyInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CompanyActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void showAllInvoices() {

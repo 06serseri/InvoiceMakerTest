@@ -1,9 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="8dp"
     tools:context=".CompanyActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textViewCompanyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Company Name: "
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextCompanyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewCompanyName"
+        android:layout_toEndOf="@id/textViewCompanyName"
+        android:hint="Company Name"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textViewCompanyAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewCompanyName"
+        android:layout_marginTop="10dp"
+        android:text="Company Address: "
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextCompanyAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewCompanyAddress"
+        android:layout_toEndOf="@id/textViewCompanyAddress"
+        android:hint="Company Address"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textViewCompanyPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewCompanyAddress"
+        android:layout_marginTop="10dp"
+        android:text="Company Phone: "
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextCompanyPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewCompanyPhone"
+        android:layout_toEndOf="@id/textViewCompanyPhone"
+        android:hint="Company Phone"
+        android:inputType="number"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textViewCompanyEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewCompanyPhone"
+        android:layout_marginTop="10dp"
+        android:text="Company Email: "
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextCompanyEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewCompanyEmail"
+        android:layout_toEndOf="@id/textViewCompanyEmail"
+        android:hint="Company Email"
+        android:inputType="number"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textViewCompanyHst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewCompanyEmail"
+        android:layout_marginTop="10dp"
+        android:text="Company HST: "
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextCompanyHst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewCompanyHst"
+        android:layout_toEndOf="@id/textViewCompanyHst"
+        android:hint="Company HST"
+        android:inputType="number"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textViewCompanyRemittance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewCompanyHst"
+        android:layout_marginTop="10dp"
+        android:text="Company Remittance: "
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextCompanyRemittance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewCompanyRemittance"
+        android:layout_toEndOf="@id/textViewCompanyRemittance"
+        android:hint="Company Remittance"
+        android:inputType="number"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/buttonSaveCompany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textViewCompanyRemittance"/>
+
+
+</RelativeLayout>
