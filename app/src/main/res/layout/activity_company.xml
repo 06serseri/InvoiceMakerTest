@@ -119,12 +119,30 @@
         android:textSize="20sp" />
 
     <Button
+        android:id="@+id/buttonApplyCompany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apply"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textViewCompanyRemittance"/>
+
+    <Button
         android:id="@+id/buttonSaveCompany"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Save"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/textViewCompanyRemittance"/>
+        android:layout_below="@+id/buttonApplyCompany"/>
+
+    <TextView
+        android:id="@+id/textViewTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonSaveCompany"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="TEST"
+        android:textSize="35sp" />
 
 
 </RelativeLayout>
