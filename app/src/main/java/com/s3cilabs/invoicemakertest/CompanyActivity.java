@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 public class CompanyActivity extends AppCompatActivity {
     private static final String TAG = "CompanyActivity";
+
     TextView textViewCompanyName, textViewCompanyAddress, textViewCompanyPhone, textViewCompanyEmail,
             textViewCompanyHst, textViewCompanyRemittance, textViewTest;
     EditText editTextCompanyName, editTextCompanyAddress, editTextCompanyPhone, editTextCompanyEmail,
@@ -22,9 +23,14 @@ public class CompanyActivity extends AppCompatActivity {
     //Constants to save data to shared preferences
     public static final String SHARED_PREFERENCES = "sharedPreferences";
     public static final String COMPANY_NAME_TEXT = "companyNameText";
+    private static final String COMPANY_ADDRESS_TEXT = "companyAddressText";
+    private static final String COMPANY_PHONE_TEXT = "companyPhoneText";
+    private static final String COMPANY_EMAIL_TEXT = "companyEmailText";
+    private static final String COMPANY_HST_TEXT = "companyHstText";
+    private static final String COMPANY_REMITTANCE_TEXT = "companyRemittanceText";
 
     //Local variables to restore data from shared preferences
-    private String companyName;
+    private String companyName, companyAddress, companyPhone, companyEmail, companyHst, companyRemittance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +38,7 @@ public class CompanyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_company);
         initViews();
 
+        //Testing the apply button
         buttonApplyCompany.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,6 +49,7 @@ public class CompanyActivity extends AppCompatActivity {
             }
         });
 
+        //Save company information to shared preferences
         buttonSaveCompany.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,14 +67,29 @@ public class CompanyActivity extends AppCompatActivity {
 
         //editor.putString(COMPANY_NAME_TEXT, textViewTest.getText().toString());
         editor.putString(COMPANY_NAME_TEXT, editTextCompanyName.getText().toString());
+        editor.putString(COMPANY_ADDRESS_TEXT, editTextCompanyAddress.getText().toString());
+        editor.putString(COMPANY_PHONE_TEXT, editTextCompanyPhone.getText().toString());
+        editor.putString(COMPANY_EMAIL_TEXT, editTextCompanyEmail.getText().toString());
+        editor.putString(COMPANY_HST_TEXT, editTextCompanyHst.getText().toString());
+        editor.putString(COMPANY_REMITTANCE_TEXT, editTextCompanyRemittance.getText().toString());
+
         editor.apply();
-        Toast.makeText(this, "Company information saved", Toast.LENGTH_SHORT).show();
+        loadData();
+        updateData();
+        Toast.makeText(this, "Company information: " + companyName + companyAddress +
+                companyPhone + companyEmail + companyHst + companyRemittance, Toast.LENGTH_LONG).show();
     }
 
     //Get data from shared preferences to a local variable
     public void loadData(){
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
+
         companyName = sharedPreferences.getString(COMPANY_NAME_TEXT, "");
+        companyAddress = sharedPreferences.getString(COMPANY_ADDRESS_TEXT, "");
+        companyPhone = sharedPreferences.getString(COMPANY_PHONE_TEXT, "");
+        companyEmail = sharedPreferences.getString(COMPANY_EMAIL_TEXT, "");
+        companyHst = sharedPreferences.getString(COMPANY_HST_TEXT, "");
+        companyRemittance = sharedPreferences.getString(COMPANY_REMITTANCE_TEXT, "");
     }
 
     public void updateData(){

@@ -77,7 +77,7 @@
         android:layout_alignBaseline="@+id/textViewCompanyEmail"
         android:layout_toEndOf="@id/textViewCompanyEmail"
         android:hint="Company Email"
-        android:inputType="number"
+        android:inputType="textEmailAddress"
         android:textSize="20sp" />
 
     <TextView
@@ -115,7 +115,7 @@
         android:layout_alignBaseline="@+id/textViewCompanyRemittance"
         android:layout_toEndOf="@id/textViewCompanyRemittance"
         android:hint="Company Remittance"
-        android:inputType="number"
+        android:inputType="textMultiLine"
         android:textSize="20sp" />
 
     <Button
