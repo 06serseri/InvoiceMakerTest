@@ -1,4 +1,4 @@
-package com.s3cilabs.invoicemakertest;
+package com.s3cilabs.invoicemakertest.Invoice;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,13 +11,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.s3cilabs.invoicemakertest.R;
+
 import java.util.List;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.InvoiceViewHolder> {
+public class InvoiceRecyclerViewAdapter extends RecyclerView.Adapter<InvoiceRecyclerViewAdapter.InvoiceViewHolder> {
     List<Invoice> invoiceList;
     Context context;
 
-    public RecyclerViewAdapter(List<Invoice> invoiceList, Context context) {
+    public InvoiceRecyclerViewAdapter(List<Invoice> invoiceList, Context context) {
         this.invoiceList = invoiceList;
         this.context = context;
     }

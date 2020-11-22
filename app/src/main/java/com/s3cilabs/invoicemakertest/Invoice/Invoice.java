@@ -1,4 +1,4 @@
-package com.s3cilabs.invoicemakertest;
+package com.s3cilabs.invoicemakertest.Invoice;
 
 public class Invoice {
 
@@ -11,8 +11,6 @@ public class Invoice {
     private double invoiceTotalAmount;
 
     //Constructor
-
-
     public Invoice(int invoiceId, String invoiceNumber, String invoiceDate, String invoiceTerms,
                    double invoiceSubTotalAmount, double invoiceTaxAmount, double invoiceTotalAmount) {
         this.invoiceId = invoiceId;
@@ -41,7 +39,6 @@ public class Invoice {
                 ", invoiceTotalAmount=" + invoiceTotalAmount +
                 '}';
     }
-
 
     //Getters and Setters
 

@@ -1,4 +1,4 @@
-package com.s3cilabs.invoicemakertest;
+package com.s3cilabs.invoicemakertest.Company;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.s3cilabs.invoicemakertest.R;
 
 public class CompanyActivity extends AppCompatActivity {
     private static final String TAG = "CompanyActivity";

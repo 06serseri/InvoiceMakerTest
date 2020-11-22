@@ -1,8 +1,6 @@
 package com.s3cilabs.invoicemakertest;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -10,6 +8,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.s3cilabs.invoicemakertest.Company.CompanyActivity;
+import com.s3cilabs.invoicemakertest.Invoice.AddInvoiceActivity;
+import com.s3cilabs.invoicemakertest.Invoice.Invoice;
+import com.s3cilabs.invoicemakertest.Invoice.InvoiceDatabaseHelper;
+import com.s3cilabs.invoicemakertest.Invoice.InvoiceRecyclerViewAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     List<Invoice> invoiceList = new ArrayList<Invoice>();
 
     private RecyclerView recyclerViewInvoice;
-    private RecyclerViewAdapter mApapter;
+    private InvoiceRecyclerViewAdapter mApapter;
     private RecyclerView.LayoutManager layoutManager;
 
     //TODO is onCreate initiated each time we go back from another activity?
@@ -51,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 layoutManager = new LinearLayoutManager(MainActivity.this);
                 recyclerViewInvoice.setLayoutManager(layoutManager);
 
-                mApapter = new RecyclerViewAdapter(invoiceList, MainActivity.this);
+                mApapter = new InvoiceRecyclerViewAdapter(invoiceList, MainActivity.this);
                 recyclerViewInvoice.setAdapter(mApapter);
             }
         });
@@ -71,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewInvoice.hasFixedSize();
         layoutManager = new LinearLayoutManager(MainActivity.this);
         recyclerViewInvoice.setLayoutManager(layoutManager);
-        mApapter = new RecyclerViewAdapter(invoiceList, MainActivity.this);
+        mApapter = new InvoiceRecyclerViewAdapter(invoiceList, MainActivity.this);
         recyclerViewInvoice.setAdapter(mApapter);
     }
 
