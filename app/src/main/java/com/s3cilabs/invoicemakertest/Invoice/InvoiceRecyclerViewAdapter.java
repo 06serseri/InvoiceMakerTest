@@ -76,10 +76,10 @@ public class InvoiceRecyclerViewAdapter extends RecyclerView.Adapter<InvoiceRecy
             super(itemView);
             textViewInvoiceId = itemView.findViewById(R.id.textViewInvoiceId);
             textViewInvoiceNumber = itemView.findViewById(R.id.textViewInvoiceNumber);
-            textViewInvoiceDate = itemView.findViewById(R.id.textViewInvoiceDate);
-            textViewInvoiceTerms = itemView.findViewById(R.id.textViewInvoiceTerms);
-            textViewInvoiceSubTotalAmount = itemView.findViewById(R.id.textViewInvoiceSubTotalAmount);
-            textViewInvoiceTaxAmount = itemView.findViewById(R.id.textViewInvoiceTaxAmount);
+            textViewInvoiceDate = itemView.findViewById(R.id.textViewBillToAddress);
+            textViewInvoiceTerms = itemView.findViewById(R.id.textViewShipToAddress);
+            textViewInvoiceSubTotalAmount = itemView.findViewById(R.id.textViewCustomerEmail);
+            textViewInvoiceTaxAmount = itemView.findViewById(R.id.textViewCustomerPhone);
             textViewInvoiceTotalAmount = itemView.findViewById(R.id.textViewInvoiceTotalAmount);
             invoiceItemLayout = itemView.findViewById(R.id.invoiceItemLayout);
         }

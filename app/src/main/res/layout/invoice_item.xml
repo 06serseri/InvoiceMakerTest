@@ -20,7 +20,7 @@
         android:hint="Invoice Number" />
 
     <TextView
-        android:id="@+id/textViewInvoiceDate"
+        android:id="@+id/textViewBillToAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Invoice Date"
@@ -28,25 +28,25 @@
         android:layout_toEndOf="@+id/textViewInvoiceNumber"/>
 
     <TextView
-        android:id="@+id/textViewInvoiceTerms"
+        android:id="@+id/textViewShipToAddress"
         android:layout_width="wrap_content"
-        android:layout_toEndOf="@+id/textViewInvoiceDate"
+        android:layout_toEndOf="@+id/textViewBillToAddress"
         android:layout_marginStart="8dp"
         android:layout_height="wrap_content"
         android:hint="Invoice Terms" />
 
     <TextView
-        android:id="@+id/textViewInvoiceSubTotalAmount"
+        android:id="@+id/textViewCustomerEmail"
         android:layout_width="wrap_content"
         android:layout_below="@+id/textViewInvoiceId"
         android:layout_height="wrap_content"
         android:hint="Invoice Sub Total" />
 
     <TextView
-        android:id="@+id/textViewInvoiceTaxAmount"
+        android:id="@+id/textViewCustomerPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@+id/textViewInvoiceSubTotalAmount"
+        android:layout_toEndOf="@+id/textViewCustomerEmail"
         android:layout_below="@+id/textViewInvoiceId"
         android:layout_marginStart="8dp"
         android:hint="Invoice Tax Amount" />
@@ -56,7 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textViewInvoiceId"
-        android:layout_toEndOf="@+id/textViewInvoiceTaxAmount"
+        android:layout_toEndOf="@+id/textViewCustomerPhone"
         android:layout_marginStart="8dp"
         android:hint="Invoice Total" />
 

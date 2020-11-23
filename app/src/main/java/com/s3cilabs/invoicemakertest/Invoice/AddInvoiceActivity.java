@@ -64,19 +64,19 @@ public class AddInvoiceActivity extends AppCompatActivity {
 
     private void initViews() {
         Log.d(TAG, "initViews:");
-        editTextInvoiceTaxAmount = findViewById(R.id.editTextInvoiceTaxAmount);
-        editTextInvoiceTerms = findViewById(R.id.editTextInvoiceTerms);
-        editTextInvoiceNumber = findViewById(R.id.editTextInvoiceNumber);
-        editTextInvoiceDate = findViewById(R.id.editTextInvoiceDate);
-        editTextInvoiceSubTotalAmount = findViewById(R.id.editTextInvoiceSubTotalAmount);
+        editTextInvoiceTaxAmount = findViewById(R.id.editTextCustomerPhone);
+        editTextInvoiceTerms = findViewById(R.id.editTextShipToAddress);
+        editTextInvoiceNumber = findViewById(R.id.editTextCustomerName);
+        editTextInvoiceDate = findViewById(R.id.editTextBillToAddress);
+        editTextInvoiceSubTotalAmount = findViewById(R.id.editTextCustomerEmail);
         editTextInvoiceTotalAmount = findViewById(R.id.editTextInvoiceTotalAmount);
 
-        textViewInvoiceDate = findViewById(R.id.textViewInvoiceDate);
+        textViewInvoiceDate = findViewById(R.id.textViewBillToAddress);
         textViewInvoiceNumber = findViewById(R.id.textViewInvoiceNumber);
-        textViewInvoiceTerms = findViewById(R.id.textViewInvoiceTerms);
-        textViewInvoiceSubTotalAmount = findViewById(R.id.textViewInvoiceSubTotalAmount);
+        textViewInvoiceTerms = findViewById(R.id.textViewShipToAddress);
+        textViewInvoiceSubTotalAmount = findViewById(R.id.textViewCustomerEmail);
         textViewInvoiceTotalAmount = findViewById(R.id.textViewInvoiceTotalAmount);
-        textViewInvoiceTaxAmount = findViewById(R.id.textViewInvoiceTaxAmount);
+        textViewInvoiceTaxAmount = findViewById(R.id.textViewCustomerPhone);
 
         buttonAdd = findViewById(R.id.buttonAdd);
     }

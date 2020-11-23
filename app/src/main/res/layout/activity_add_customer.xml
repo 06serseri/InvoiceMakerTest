@@ -12,8 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="$"
-        android:inputType="numberDecimal"
+        android:hint="(123) 456-7890"
+        android:inputType="phone"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/textViewCustomerPhone"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -25,8 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Terms"
-        android:inputType="textPersonName"
+        android:hint="Ship To"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/textViewShipToAddress"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -39,18 +38,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:text="Invoice Date"
+        android:text="Bill To"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewInvoiceNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewCustomerName" />
 
     <TextView
-        android:id="@+id/textViewInvoiceNumber"
+        android:id="@+id/textViewCustomerName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:text="Invoice Number"
+        android:text="Customer Name"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -61,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:text="Invoice Terms"
+        android:text="Ship To"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewBillToAddress" />
@@ -72,7 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:text="Sub Total"
+        android:text="Email"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewShipToAddress" />
@@ -83,29 +82,17 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:text="Tax"
+        android:text="Phone"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewCustomerEmail" />
-
-    <TextView
-        android:id="@+id/textViewInvoiceTotalAmount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="Total Amount"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewCustomerPhone" />
 
     <EditText
         android:id="@+id/editTextCustomerName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="#"
-        android:inputType="textPersonName"
+        android:hint="Customer Name"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/textViewInvoiceNumber"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -116,8 +103,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Date"
-        android:inputType="textPersonName"
+        android:hint="Bill To"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/textViewBillToAddress"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -129,26 +115,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="$"
-        android:inputType="numberDecimal"
+        android:hint="ttt@ttt.com"
+        android:inputType="textEmailAddress"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/textViewCustomerEmail"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/textViewCustomerEmail"
         app:layout_constraintVertical_bias="0.761" />
-
-    <EditText
-        android:id="@+id/editTextInvoiceTotalAmount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="$"
-        android:inputType="numberDecimal"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewInvoiceTotalAmount"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/textViewInvoiceTotalAmount"
-        app:layout_constraintVertical_bias="0.428" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -158,7 +131,7 @@
         app:layout_constraintGuide_begin="158dp" />
 
     <Button
-        android:id="@+id/buttonAdd"
+        android:id="@+id/buttonAddCustomer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -166,5 +139,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextInvoiceTotalAmount" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCustomerPhone" />
 </androidx.constraintlayout.widget.ConstraintLayout>
